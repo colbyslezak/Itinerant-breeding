@@ -42,7 +42,7 @@ library(grid)
 library(ggpubr)
 
 #login to movebank, this gives me full access to the whole dataset
-login <- movebankLogin(username = "colby_slezak", password="Mamajama12!")
+login <- movebankLogin(username = "colby_slezak", password="requestaccessfromauthor")
 amwo_data <- getMovebankData(study = "American Woodcock Migration Ecology in Eastern North America", 
                              login = login, 
                              removeDuplicatedTimestamps=TRUE)
