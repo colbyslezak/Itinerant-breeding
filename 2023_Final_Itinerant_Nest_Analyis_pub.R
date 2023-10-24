@@ -724,6 +724,10 @@ nests202225 <- readRDS("./ObjectsAndModels/nests202225.rds")
 # there are a total of 350 nests before filtering dead
 combinednests25 <- rbind(nests201925, nests202025, nests202125, nests202225)
 
+# write.csv(combinednests25, "./Data/combinednests25fulldata.csv", row.names = FALSE)
+
+# read data back in
+combinednests25 <- read.csv("./Data/combinednests25fulldata.csv")
 
 # filter out nests from hens that were dead via Liam's HMM model, there are now 336 nests 
 combinednests25 <- combinednests25 %>% filter(!(burst=="NC-2021-21" & loc_id == 33)) %>% filter(!(burst=="LA-2022-14" & loc_id == 59)) %>% filter(!(burst=="NJ-2019-26" & loc_id == 23))%>% filter(!(burst=="NY-2019-19" & loc_id == 5))%>% filter(!(burst=="NY-2022-46" & loc_id == 4)) %>% filter(!(burst=="RI-2018-02"& loc_id== 7)) %>% filter(!(burst=="RI-2021-52" & loc_id == 10)) %>% filter(!(burst=="VA-2019-26" & loc_id == 3)) %>% filter(!(burst=="VA-2020-82"))%>% filter(!(burst=="NC-2020-09")) %>% filter(!(burst=="VA-2019-16"))%>% filter(!(burst=="VA-2019-24")) %>% filter(!(burst=="LA-2022-14" & loc_id == 59)) %>% filter(!(burst=="NJ-2019-25" & loc_id == 72)) %>% filter(!(burst=="NJ-2019-25" & loc_id == 74)) 
