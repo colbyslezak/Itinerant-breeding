@@ -702,6 +702,8 @@ nests202225 <- readRDS("./ObjectsAndModels/proportionplots/nests202225.rds")
 combinednests25 <- rbind(nests201925, nests202025, nests202125, nests202225)
 
 # write.csv(combinednests25, "./Data/proportionplots/combinednests25.csv", row.names = FALSE)
+# read data back in
+combinednests25 <- read.csv("./Data/proportionplots/combinednests25.csv")
 
 
 # filter out nests from hens that were dead via Liam's HMM model, there are now 144 nests 
